@@ -1,0 +1,174 @@
+.home {
+  min-height: 100dvh;
+  background: #ffffff;
+  color: #231f20;
+}
+
+.panel {
+  position: relative;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  place-items: center;
+  padding: clamp(2rem, 5vw, 5rem) 10%;
+  overflow: hidden;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  padding: 30px clamp(1.5rem, 4vw, 4rem);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 2;
+}
+
+.navbar a {
+  color: #231f20;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.logo {
+  width: min(36vw, 15rem);
+  height: auto;
+  animation: logoEntrance 1400ms ease-out both;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 0.35em;
+  min-height: 1.2em;
+  margin-top: clamp(1.25rem, 4vh, 2.5rem);
+  font-size: clamp(1.725rem, 4.5vw, 3.15rem);
+  font-weight: 900;
+  line-height: 1;
+  text-align: center;
+  animation: typingEntrance 1400ms ease-out both;
+}
+
+.word {
+  display: inline-flex;
+  min-width: 2.5em;
+}
+
+.word::after {
+  content: "|";
+  margin-left: 0.05em;
+  animation: cursorBlink 1s steps(1) infinite;
+}
+
+.details {
+  font-size: clamp(1.4rem, 1.9vw, 1.75rem);
+  font-weight: 400;
+}
+
+.details p,
+.details a {
+  position: absolute;
+  z-index: 1;
+  bottom: clamp(1.5rem, 5vw, 4rem);
+  white-space: nowrap;
+}
+
+.details p {
+  left: clamp(1.5rem, 4vw, 4rem);
+}
+
+.details a {
+  right: clamp(1.5rem, 4vw, 4rem);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  text-align: right;
+  text-decoration: none;
+}
+
+.addressIcon {
+  width: 0.72em;
+  height: 0.72em;
+  fill: currentColor;
+  flex: 0 0 auto;
+}
+
+@keyframes logoEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(1rem) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes typingEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(-1rem) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes cursorBlink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 720px) {
+  .panel {
+    padding-inline: 4%;
+  }
+
+  .logo {
+    width: min(48vw, 11rem);
+  }
+
+  .heading {
+    font-size: clamp(1.1rem, 6vw, 2rem);
+  }
+
+  .word {
+    justify-content: center;
+  }
+
+  .details p,
+  .details a {
+    bottom: 1.25rem;
+  }
+
+  .details p {
+    left: 1rem;
+  }
+
+  .details a {
+    right: 1rem;
+  }
+
+  .navbar {
+    padding-right: 1rem;
+  }
+}

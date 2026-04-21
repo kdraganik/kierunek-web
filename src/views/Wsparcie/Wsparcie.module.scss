@@ -1,0 +1,416 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+.wsparcie {
+  position: relative;
+  width: 100vw;
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  background-color: #ffffff;
+  color: #231f20;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  max-width: 100vw;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 100;
+}
+
+.navLeft {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.navLogo {
+  margin-top: 0.5em;
+  margin-right: 1em;
+  width: 10em;
+  height: auto;
+  align-self: flex-end;
+}
+
+.container {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.divider {
+  width: 0;
+  height: 28em;
+  margin: 0 5em;
+  border: 1px solid #231f20;
+}
+
+.bigLogo {
+  margin-top: 0.5em;
+  margin-right: 1em;
+  width: 6.5em;
+  height: auto;
+  align-self: flex-end;
+}
+
+.inspiration {
+  margin: 1em;
+  font-size: 1.3em;
+  text-align: justify;
+}
+
+.formWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.form {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+}
+
+.inputs {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2em;
+}
+
+.inputBox {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.8em;
+}
+
+.label {
+  display: block;
+  margin: 0.2em 0;
+  font-weight: 600;
+  font-size: 0.9em;
+  text-transform: uppercase;
+}
+
+.input {
+  width: 100%;
+  border: none;
+  background: none;
+  font-size: 1.8em;
+  outline: none;
+  z-index: 2;
+  border-bottom: 1px solid #ffffff;
+}
+
+.input:focus,
+.input:invalid {
+  border-bottom: 1px solid #000000;
+}
+
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover,
+.input:-webkit-autofill:focus,
+.input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #ffffff inset !important;
+}
+
+.amountInput {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.amountInput::-webkit-outer-spin-button,
+.amountInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.currency {
+  font-size: 1.8em;
+  position: absolute;
+  bottom: calc(-0.18em + 1px);
+  z-index: 1;
+}
+
+.amountButtons {
+  position: absolute;
+  height: 1.8em;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  z-index: 3;
+}
+
+.increase,
+.decrease {
+  position: relative;
+  width: 1.5em;
+  height: 1.5em;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.decrease {
+  margin-right: 0.5em;
+}
+
+.increase::before,
+.increase::after,
+.decrease::before {
+  position: absolute;
+  left: 0.75em;
+  content: "";
+  height: 1.5em;
+  width: 2px;
+  background-color: #231f20;
+}
+
+.increase::before,
+.decrease::before {
+  transform: rotate(90deg);
+}
+
+.rulesLink {
+  margin-top: 0.7em;
+  color: #231f20;
+}
+
+.submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 1.2em;
+  width: 180px;
+  height: 2.8em;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 2px;
+  border: 2px solid #231f20;
+  background-color: #ffffff;
+  transition: all 0.3s ease-out;
+  color: #231f20;
+}
+
+.submit:hover {
+  background-color: #231f20;
+  color: #ffffff;
+}
+
+.loader {
+  display: inline-block;
+  position: relative;
+  width: 4em;
+  height: 4em;
+}
+
+.loader div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #231f20;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.loader div:nth-child(1) {
+  left: 8px;
+  animation: ldsEllipsis1 0.6s infinite;
+}
+
+.loader div:nth-child(2) {
+  left: 8px;
+  animation: ldsEllipsis2 0.6s infinite;
+}
+
+.loader div:nth-child(3) {
+  left: 32px;
+  animation: ldsEllipsis2 0.6s infinite;
+}
+
+.loader div:nth-child(4) {
+  left: 56px;
+  animation: ldsEllipsis3 0.6s infinite;
+}
+
+.error {
+  text-align: center;
+  margin-top: 1em;
+  color: #ff0000;
+}
+
+.account {
+  padding: 12px;
+  margin-top: 30px;
+  font-size: 12px;
+  color: #231f20;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  z-index: 1;
+}
+
+.account h2 {
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.account div {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.account div p {
+  text-align: center;
+}
+
+.account > p {
+  font-size: 16px;
+}
+
+@keyframes ldsEllipsis1 {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes ldsEllipsis3 {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes ldsEllipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+@media (min-width: 480px) {
+  .navbar {
+    padding: 30px 50px;
+  }
+}
+
+@media (min-width: 768px) {
+  .account {
+    position: absolute;
+    left: 0;
+    bottom: 50px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 1200px) {
+  .navbar {
+    padding: 30px 150px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .wsparcie {
+    font-size: 0.9em;
+  }
+
+  .container {
+    width: 40%;
+  }
+
+  .divider {
+    margin: 0 3em;
+  }
+
+  .form {
+    width: 80%;
+  }
+}
+
+@media (max-width: 992px) {
+  .wsparcie {
+    font-size: 0.85em;
+  }
+
+  .container {
+    width: 50%;
+  }
+
+  .divider {
+    margin: 0 1.5em;
+  }
+
+  .form {
+    width: 85%;
+  }
+}
+
+@media (max-width: 768px) {
+  .wsparcie {
+    flex-direction: column;
+    font-size: 0.7em;
+  }
+
+  .container {
+    width: 75%;
+    margin: 1em 0;
+  }
+
+  .container[data-position="top"] {
+    justify-content: flex-end;
+    margin-top: 100px;
+  }
+
+  .container[data-position="bottom"] {
+    justify-content: flex-start;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .inspiration {
+    margin: 0.5em 1em 0.5em 1.5em;
+  }
+
+  .formWrapper {
+    align-items: center;
+  }
+}

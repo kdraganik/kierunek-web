@@ -1,0 +1,39 @@
+body{
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+.wrapper{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #231F20;
+}
+h2{
+  font-size: 2.4em;
+  text-align: center;
+  margin-bottom: .5em;
+}
+img{
+  width: 20em;
+  height: auto;
+}
+
+@media (max-width: 1200px) {
+  body{
+    font-size: 0.9em;
+  }
+}
+@media (max-width: 992px) { 
+  body{
+    font-size: 0.85em;
+  }
+}
+@media (max-width: 768px) {
+  body{
+    font-size: 0.7em;
+  }
+}
