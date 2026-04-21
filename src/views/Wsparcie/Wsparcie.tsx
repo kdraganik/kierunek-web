@@ -4,6 +4,7 @@ import { FormEvent, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+import logoBlack from "@/images/logo_black.svg";
 import styles from "./Wsparcie.module.scss";
 
 type PaymentPayload = {
@@ -39,10 +40,8 @@ function Navbar() {
         <Link href="/" aria-label="Kierunek">
           <Image
             className={styles.navLogo}
-            src="/logo_black.svg"
+            src={logoBlack}
             alt="Kierunek"
-            width={825}
-            height={148}
             priority
           />
         </Link>
@@ -204,10 +203,8 @@ export default function Wsparcie() {
         </p>
         <Image
           className={styles.bigLogo}
-          src="/logo_black.svg"
+          src={logoBlack}
           alt="Kierunek"
-          width={825}
-          height={148}
         />
       </section>
       <div className={styles.divider} />

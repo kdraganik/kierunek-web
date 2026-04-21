@@ -1,6 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import fbIcon from "@/images/fb-icon.svg";
+import igIcon from "@/images/ig-icon.svg";
+import logoBlack from "@/images/logo_black.svg";
 import TypewriterText from "+/TypewriterText/TypewriterText";
 import styles from "./Home.module.scss";
 
@@ -14,10 +17,8 @@ export default function Home() {
 
         <Image
           className={styles.logo}
-          src="/logo_black.svg"
+          src={logoBlack}
           alt="Kierunek"
-          width={825}
-          height={148}
           priority
         />
 
@@ -35,6 +36,27 @@ export default function Home() {
 
         <div className={styles.details} aria-label="Informacje o spotkaniu">
           <p>Każda niedziela 11:00</p>
+          <div className={styles.socials} aria-label="Aktualności">
+            <span>aktualności</span>
+            <div className={styles.socialLinks}>
+              <a
+                href="https://www.instagram.com/kosciolkierunek"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Instagram Kościół Kierunek"
+              >
+                <Image src={igIcon} alt="" width={24} height={24} />
+              </a>
+              <a
+                href="https://www.facebook.com/kosciolkierunek"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Facebook Kościół Kierunek"
+              >
+                <Image src={fbIcon} alt="" width={24} height={24} />
+              </a>
+            </div>
+          </div>
           <a
             href="https://www.google.com/maps/search/?api=1&query=Zakrzowska%2029%2C%20Wroc%C5%82aw"
             target="_blank"
